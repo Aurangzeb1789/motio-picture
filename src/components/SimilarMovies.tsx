@@ -17,7 +17,7 @@ async function SimilarMovies({movieId, vertical }: any) {
     <div className="">
         <div className="flex overflow-x-auto no-scrollbar space-x-6 h-[350px] px-5 lg:px-10 py-5">
           {newData.map((item: any) => (
-            <Link href={`/moviedetail/${item.id}`}>
+            <Link href={`/moviedetail/${item.id}`} key={item.id}>
             <div  className="w-[200px] flex-shrink-0 rounded">
             <Image src={`http://image.tmdb.org/t/p/original/${item.poster_path}`} alt="" width={1920} height={1080} className=" rounded-lg relative transform hover:scale-110 transition-all  ease-out  cursor-pointer "/>
             </div>

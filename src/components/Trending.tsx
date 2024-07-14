@@ -42,7 +42,7 @@ async function Trending({ vertical }: any) {
 
           {newData.map((item: any) => (
             <>
-              <div className="m-3 flex items-center lg:gap-x-10 flex-col lg:flex-row overflow-hidden">
+              <div className="m-3 flex items-center lg:gap-x-10 flex-col lg:flex-row overflow-hidden" key={item.id}>
                 <div className="flex w-[90vw] lg:w-[600px] lg:m-3 cursor-pointer transform hover:scale-105 transition duration-200 ease-out overflow-hidden">
                 <Link href={`/moviedetail/${item.id}`}>
                   <Image src={`http://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="" width={1920} height={1080} className=" rounded-lg" /> </Link>
@@ -62,7 +62,7 @@ async function Trending({ vertical }: any) {
         // <div className=/*"flex space-x-6 h-[350px] px-5 lg:px-10 py-5 overflow-scroll no-scrollbar"*/ "">
         <div className="flex overflow-x-auto no-scrollbar space-x-6 h-[350px] px-5 lg:px-10 py-5">
           {newData.map((item: any) => (
-            <Link href={`/moviedetail/${item.id}`}>
+            <Link href={`/moviedetail/${item.id}`} key={item.id}>
             <div  className="w-[200px] flex-shrink-0 rounded">
             <Image src={`http://image.tmdb.org/t/p/original/${item.poster_path}`} alt="" width={1920} height={1080} className=" rounded-lg relative transform hover:scale-110 transition-all  ease-out  cursor-pointer "/>
             </div>

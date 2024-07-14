@@ -81,7 +81,7 @@ function Footer() {
             <div>
                 {
                     infoArray.map((item) => (
-                        <div className="relative">
+                        <div className="relative" key={item.title}>
                             <Link href={item.href}>
                                 <span className="group">
                                     <span className="w-2 h-2 inline-block rounded-full border border-red-700 transition-all duration-200 hover:bg-red-700 group-hover:bg-red-700 absolute top-3" />
@@ -104,7 +104,7 @@ function Footer() {
             <div>
                 {
                     contactArray.map((item) => (
-                        <div className="relative">
+                        <div className="relative" key={item.title}>
                             <Link href={item.href}>
                                 <span className="group">
                                     <span className="w-2 h-2 inline-block rounded-full border border-red-700 transition-all duration-200 hover:bg-red-700 group-hover:bg-red-700 absolute top-3" />
